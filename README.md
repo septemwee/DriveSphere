@@ -1,42 +1,31 @@
 # DriveSphere Drone Log Project
 
-ยินดีต้อนรับสู่โพรเจกต์ **DriveSphere**!  
-นี่คือโพรเจกต์ **Full-Stack**  
-สำหรับบันทึกและตรวจสอบข้อมูล Log (เช่น อุณหภูมิ)  
-จากโดรน
+    ยินดีต้อนรับสู่โพรเจกต์ **DriveSphere**! นี่คือโพรเจกต์ **Full-Stack**  สำหรับบันทึกและตรวจสอบข้อมูล Log จากโดรน
 
-โพรเจกต์นี้ถูกสร้างขึ้นเพื่อสาธิตการทำงานร่วมกันระหว่าง  
-**Frontend** (Next.js) ที่ทันสมัย  
-และ **Backend** (Express.js)  
-ที่ทำหน้าที่เป็น Proxy API  
-เพื่อเชื่อมต่อกับบริการภายนอกอย่างปลอดภัย
-
-
+    โพรเจกต์นี้ถูกสร้างขึ้นเพื่อสาธิตการทำงานร่วมกันระหว่าง **Frontend** (Next.js) ที่ทันสมัย และ **Backend** (Express.js) ที่ทำหน้าที่เป็น Proxy API เพื่อเชื่อมต่อกับบริการภายนอกอย่างปลอดภัย
 
 ## Features
 
-* **Frontend (ส่วนหน้าเว็บ):**
-    * **Dynamic Log Table:**  
+* **Frontend (ส่วนหน้าเว็บ)**
+    * **Dynamic Log Table**  
       แสดงผล Log ของโดรนในรูปแบบตารางที่อ่านง่าย
-    * **Pagination:**  
+    * **Pagination**  
       ระบบแบ่งหน้าที่มีประสิทธิภาพ เพื่อรองรับข้อมูลจำนวนมาก
-    * **Log Submission Form:**  
+    * **Log Submission Form**  
       ฟอร์มสำหรับส่งข้อมูลอุณหภูมิใหม่
-    * **Responsive Design:**  
+    * **Responsive Design**  
       ออกแบบด้วย Tailwind CSS เพื่อรองรับการใช้งานบนมือถือและเดสก์ท็อป
 
 * **Backend (ส่วนเซิร์ฟเวอร์):**
-    * **API Proxy:**  
+    * **API Proxy**  
       ทำหน้าที่เป็นเซิร์ฟเวอร์ตัวกลาง (BFF) รับคำสั่งจาก Frontend  
       และไปดึงข้อมูลจาก API ภายนอกอีกที
-    * **Secure:**  
+    * **Secure**  
       ซ่อน API Token และ URL ของ API ภายนอกไว้ที่เซิร์ฟเวอร์  
       ป้องกันไม่ให้ข้อมูลสำคัญรั่วไหลไปที่ฝั่ง Client
-    * **Multiple Endpoints:**  
+    * **Multiple Endpoints**  
       ให้บริการ API สำหรับดึงข้อมูล Config, Status, และ Logs  
       รวมถึงการสร้าง Log ใหม่
-
-
 
 ## Tech Stack
 
@@ -56,36 +45,27 @@
 
 ## Structure
 
-โพรเจกต์นี้ถูกออกแบบในโครงสร้างแบบ **Monorepo**  
-(หรือโพรเจกต์ที่เชื่อมต่อกัน)  
-โดยแบ่งการทำงานออกเป็น 2 ส่วนหลัก  
-ซึ่งถูก deploy แยกกันบน Vercel:
+    โพรเจกต์นี้ถูกออกแบบในโครงสร้างแบบ **Monorepo** (หรือโพรเจกต์ที่เชื่อมต่อกัน) โดยแบ่งการทำงานออกเป็น 2 ส่วนหลัก ซึ่งถูก deploy แยกกันบน Vercel
 
 ### 1. [Assignment #1: Backend (Express API)](./drone-server/README.md)
 
-* **โฟลเดอร์:** `drone-server` 
-* **หน้าที่:**  
-  เซิร์ฟเวอร์ API ที่สร้างด้วย Express.js ทำหน้าที่เป็น  
-  'Backend-for-Frontend' (BFF)  
-  รับคำสั่งจาก Frontend, ซ่อน API Token ที่แท้จริง,  
-  และไปดึงข้อมูลจาก External API ภายนอก  
-* **ลิงก์ Deploy:**  
-  [**Backend Live (Vercel)**](https://drive-sphere-server.vercel.app)  
-* **คำอธิบายเพิ่มเติม:**  
+* **โฟลเดอร์** `drone-server` 
+* **หน้าที่**  
+  เซิร์ฟเวอร์ API ที่สร้างด้วย Express.js ทำหน้าที่เป็น 'Backend-for-Frontend' (BFF) รับคำสั่งจาก Frontend, ซ่อน API Token ที่แท้จริง และไปดึงข้อมูลจาก External API ภายนอก  
+* **ลิงก์ Deploy**  
+  [Backend Live (Vercel)](https://drive-sphere-server.vercel.app)  
+* **คำอธิบายเพิ่มเติม**  
   [ดู API Endpoints และวิธีรันใน Readme ของ Assignment #1](./drone-server/README.md)
 
 
 ### 2. [Assignment #2: Frontend (Next.js App)](./drone-web/README.md)
 
-* **โฟลเดอร์:** `drone-web`
-* **หน้าที่:**  
-  ส่วนติดต่อผู้ใช้ (UI) ที่สร้างด้วย Next.js และ Tailwind CSS  
-  ทำหน้าที่แสดงผลข้อมูลที่สวยงามและใช้งานง่าย  
-  ผู้ใช้สามารถดูตาราง Log ที่มีการแบ่งหน้า  
-  และส่งข้อมูลใหม่ผ่านฟอร์ม  
-* **ลิงก์ Deploy:**  
-  [**Frontend Live (Vercel)**](https://drive-sphere-web.vercel.app)  
-* **คำอธิบายเพิ่มเติม:**  
+* **โฟลเดอร์** `drone-web`
+* **หน้าที่**  
+  ส่วนติดต่อผู้ใช้ (UI) ที่สร้างด้วย Next.js และ Tailwind CSS ทำหน้าที่แสดงผลข้อมูลที่สวยงามและใช้งานง่าย ผู้ใช้สามารถดูตาราง Log ที่มีการแบ่งหน้า และส่งข้อมูลใหม่ผ่านฟอร์ม  
+* **ลิงก์ Deploy**  
+  [Frontend Live (Vercel)](https://drive-sphere-web.vercel.app)  
+* **คำอธิบายเพิ่มเติม**  
   [ดูวิธีรัน Frontend ใน Readme ของ Assignment #2](./drone-web/README.md)
 
 
