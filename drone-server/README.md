@@ -112,25 +112,50 @@
 * **Body**  
   ```json
   {
-    "drone_id": "3001",
-    "drone_name": "Drone A",
-    "country": "Thailand",
+    "drone_id": "66010051",
+    "drone_name": "Delibrate Drive",
+    "country": "Brazil",
     "celsius": 29
   }
+* **Response Example**
+  ```json
+  {
+    "celsius": 29,
+    "collectionId": "ra4yr307291j38v",
+    "collectionName": "drone_logs",
+    "country": "Brazil",
+    "created": "2025-11-05 14:44:35.969Z",
+    "drone_id": 66010051,
+    "drone_name": "Deliberate Drive",
+    "id": "6k0osmcf6om1ga2",
+    "updated": "2025-11-05 14:44:35.969Z"
+  }
+
 * **การทำงาน**  
-  รับข้อมูลจาก Frontend และส่งไปยัง LOG_URL (พร้อม Token) เพื่อบันทึก Log ใหม่
+  รับข้อมูลจาก Frontend และส่งไปยัง LOG_URL (พร้อม Token) เพื่อบันทึก Log ใหม่ลงในระบบภายนอก หากสำเร็จจะได้ข้อมูลของ Log ที่สร้างใหม่กลับมาพร้อม id และ timestamp
 
 ### 5. Get Logs
 * **Method** `GET`  
 * **Endpoint** `/logs/:droneId`  
-* **Body**  
+* **Response Example**  
   ```json
-  {
-    "drone_id": "3001",
-    "drone_name": "Drone A",
-    "country": "Thailand",
-    "celsius": 29
-  }
+  [
+    {
+        "drone_id": 66010051,
+        "drone_name": "Deliberate Drive",
+        "country": "Brazil",
+        "celsius": 39,
+        "created": "2025-11-05 14:40:12.567Z"
+    },
+    {
+        "drone_id": 66010051,
+        "drone_name": "Deliberate Drive",
+        "country": "Brazil",
+        "celsius": 29,
+        "created": "2025-11-05 14:44:35.969Z"
+    }
+  ]
+
 * **การทำงาน**  
   คล้ายกับ /logs-paginated/:droneId แต่จะส่งกลับเฉพาะ Array items (ไม่มี totalPages)
 
