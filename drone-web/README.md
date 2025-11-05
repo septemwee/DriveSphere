@@ -58,7 +58,7 @@
     แล้วเพิ่มค่าต่อไปนี้ (ใช้ URL ของ Backend จริง)
 
     ```env
-    NEXT_PUBLIC_API_URL=https://drive-sphere-server.vercel.app
+    NEXT_PUBLIC_API_URL=http://localhost:3001
     NEXT_PUBLIC_DRONE_ID=66010051
     ```
 
@@ -86,7 +86,13 @@
 * ใช้ฟังก์ชัน `fetch()` ดึงข้อมูลจาก Backend เช่น
 
   ```ts
-  const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/configs/${process.env.NEXT_PUBLIC_DRONE_ID}`);
-  const data = await response.json();
+  const apiUrl = process.env.NEXT_PUBLIC_API_URL;
+  const droneId = process.env.NEXT_PUBLIC_DRONE_ID;
+
+  const response = await fetch(`${apiUrl}/configs/${droneId}`, { cache: "no-store" });
+  if (!response.ok) {
+    throw new Error(`Failed to fetch: Server responded with ${response.status}`);
+  }
+  return response.json();
   ```
 * เมื่อ Deploy บน Vercel ต้องตั้งค่า Environment Variables ใน Dashboard ของ Vercel ด้วย
