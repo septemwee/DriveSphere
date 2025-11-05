@@ -78,7 +78,7 @@
 
 ## Deployment
 
-แอปนี้ถูก Deploy บน **Vercel** และเชื่อมต่อกับ Backend (Assignment #1) โดยตรงผ่าน Environment Variables  
+แอปนี้ถูก Deploy บน **Vercel** และเชื่อมต่อกับ Backend (Assignment #1 or Vercel) โดยตรงผ่าน Environment Variables  
 
 🔗 [**Frontend Live on Vercel**](https://drive-sphere-web.vercel.app)
 
