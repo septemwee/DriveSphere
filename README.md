@@ -83,6 +83,6 @@
 ## หมายเหตุ
 
 * Backend ใช้ **Express + Node.js** ที่ deploy บน Vercel แบบ Serverless Function  
-* Frontend ใช้ **Next.js 15 + TypeScript** และเชื่อมต่อกับ Backend ผ่านตัวแปร `NEXT_PUBLIC_API_URL`  
+* Frontend ใช้ **Next.js + TypeScript** และเชื่อมต่อกับ Backend ผ่านตัวแปร `NEXT_PUBLIC_API_URL`  
 * โครงสร้างทั้งคู่สามารถรันแยกกันได้ในเครื่อง (localhost)  
   หรือเชื่อมต่อกันบน Production environment ผ่าน Vercel  
