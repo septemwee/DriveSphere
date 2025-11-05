@@ -51,10 +51,17 @@
 3. **สร้างไฟล์ Environment Variables**
     สร้างไฟล์ชื่อ `.env.local` ภายในโฟลเดอร์ `drone-web` แล้วเพิ่มค่าต่อไปนี้ (ใช้ URL ของ Backend จริง)
 
+    * **localhost** เรียก server ที่เปิดใน Assignment #1
     ```env
     NEXT_PUBLIC_API_URL=http://localhost:3001
     NEXT_PUBLIC_DRONE_ID=66010051
     ```
+    * **Production (Vercel)** เรียก server ที่ deploy บน Vercel
+    ```env
+    NEXT_PUBLIC_API_URL=https://drive-sphere-server.vercel.app
+    NEXT_PUBLIC_DRONE_ID=66010051
+    ```
+
 
 4. **รันเว็บแอป**
     ```bash
