@@ -70,7 +70,7 @@ export default function LogsTable({ page }: { page: number }) {
                 Name
               </th>
               <th className="px-2 sm:px-4 py-2 text-[10px] sm:text-xs font-semibold text-gray-600 uppercase tracking-wider w-[15%]">
-                C
+                Celsius
               </th>
             </tr>
           </thead>
