@@ -10,6 +10,10 @@ app.use(express.json());
 
 const { CONFIG_URL, LOG_URL, LOG_API_TOKEN } = process.env;
 
+app.get('/', (req, res) => {
+  res.send('🚀 Drone API Server is running successfully on Vercel!');
+});
+
 
 app.get('/configs/:droneId', async (req, res) => {
     const droneId = parseInt(req.params.droneId, 10);
