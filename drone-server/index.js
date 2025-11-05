@@ -161,6 +161,4 @@ app.post('/logs', async (req,res) => {
     }
 })
 
-app.listen(port, () => {
-  console.log(`API Server is running at http://localhost:${port}`);
-})
+module.exports = app;
