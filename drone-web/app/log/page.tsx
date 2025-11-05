@@ -1,4 +1,4 @@
-import LogsTable from "@/components/LogsTable";
+import LogsTable from "@/components/logsTable";
 
 export default async function ViewLogsPage({ searchParams }: { searchParams: Promise<{ page?: string }> }) {
   const params = await searchParams;
