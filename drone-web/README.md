@@ -66,7 +66,8 @@
     ```bash
     npm run dev
     ```
-    แอปจะรันที่  `[http://localhost:3000](http://localhost:3000)`
+    แอปจะรันที่  
+    🔗 `[http://localhost:3000](http://localhost:3000)`
 
 
 
