@@ -36,7 +36,6 @@
 | | Tailwind CSS | สำหรับการออกแบบ UI สมัยใหม่ |
 | **Backend** | Node.js | สภาพแวดล้อมสำหรับรัน JavaScript |
 | | Express.js | Framework หลักสำหรับสร้าง API Server |
-| | `node-fetch` | สำหรับยิงไปหา API ภายนอก |
 | | `dotenv` | จัดการ Environment Variables |
 | **Deployment** | Vercel | แพลตฟอร์มสำหรับ Deploy ทั้ง Frontend และ Backend |
 | **Code** | Git & GitHub | สำหรับการจัดการเวอร์ชัน (Monorepo/Submodule) |
