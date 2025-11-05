@@ -11,7 +11,7 @@
 ที่ทำหน้าที่เป็น Proxy API  
 เพื่อเชื่อมต่อกับบริการภายนอกอย่างปลอดภัย
 
----
+
 
 ## Features
 
@@ -36,7 +36,7 @@
       ให้บริการ API สำหรับดึงข้อมูล Config, Status, และ Logs  
       รวมถึงการสร้าง Log ใหม่
 
----
+
 
 ## Tech Stack
 
@@ -52,7 +52,7 @@
 | **Deployment** | Vercel | แพลตฟอร์มสำหรับ Deploy ทั้ง Frontend และ Backend |
 | **Code** | Git & GitHub | สำหรับการจัดการเวอร์ชัน (Monorepo/Submodule) |
 
----
+
 
 ## Structure
 
@@ -88,18 +88,18 @@
 * **คำอธิบายเพิ่มเติม:**  
   [ดูวิธีรัน Frontend ใน Readme ของ Assignment #2](./drone-web/README.md)
 
----
+
 
 ## Deployment
 
-โพรเจกต์นี้ถูก Deploy แยกออกเป็น 2 ส่วนบน **Vercel** ดังนี้:
+โพรเจกต์นี้ถูก Deploy แยกออกเป็น 2 ส่วนบน **Vercel** ดังนี้
 
 | ส่วน | URL | รายละเอียด |
 |------|-----|-------------|
 |  **Frontend (Web App)** | [https://drive-sphere-web.vercel.app](https://drive-sphere-web.vercel.app) | เว็บแอป Next.js สำหรับดูบันทึกโดรน |
 |  **Backend (API Server)** | [https://drive-sphere-server.vercel.app](https://drive-sphere-server.vercel.app) | Express.js API สำหรับเชื่อมต่อกับระบบภายนอก |
 
----
+
 
 ## หมายเหตุ
 
